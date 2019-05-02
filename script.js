@@ -15,6 +15,17 @@ request.onload = function() {
     const major = data.ua.browser.major.toLowerCase();
     const name = data.ua.browser.name.toLowerCase();
     console.log(name, major);
+    const searchString = name + " " + major;
+    console.log(searchString);
+    var supported = bl.find(function(item) {
+      return item == searchString;
+    });
+    console.log(supported);
+    if (supported != undefined) {
+      console.log("*** your browser is supported ***");
+    } else {
+      console.log("*** your browser in unsuported you pleb***");
+    }
   } else {
     console.log("error");
   }
