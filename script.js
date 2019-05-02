@@ -1,23 +1,3 @@
-// const caniuse = require("caniuse-api");
-
-// caniuse.setBrowserScope("> 5%, last 3 versions");
-
-// const browser = caniuse.getBrowserScope();
-// const stable = caniuse.getLatestStableBrowsers();
-// const usage = caniuse.getSupport("border-radius");
-// console.log(stable);
-// console.log(browser);
-// console.log(usage);
-
-// const ae = caniuse.getSupport("border-radius");
-// const aee = caniuse.isSupported("border-radius", "ie 8, ie 9");
-// caniuse.setBrowserScope("> 5%, last 1 version");
-// const aeeee = caniuse.getSupport("border-radius");
-
-// console.log(ae);
-// console.log(aee);
-// console.log(aeee);
-// console.log(aeeee);
 const browserslist = require("browserslist");
 const query = "last 2 versions" || "last 2 versions";
 bl = browserslist(query);
