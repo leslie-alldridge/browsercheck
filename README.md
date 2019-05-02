@@ -1,5 +1,5 @@
 # browsercheck
-browsercheck
+browsercheck possible solution
 
 ```
 yarn
