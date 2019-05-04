@@ -40,18 +40,31 @@ const data = [
   ["edge", "18"],
   ["edge", "17"]
 ]
+let supportObj = {
+  "chrome": "",
+  "edge": "",
+  "firefox": "",
+  "ie": "",
+  "safari": ""
+}
 
-var chromeArray = data.filter(function(item) {
-  return item[0] == "chrome";
+function sortData(name){
+  supportObj[name] = data.filter(function(item) {
+    return item[0] == name;
+  });
+}
+
+Object.keys(supportObj).forEach(function(key) {
+  sortData(key)
 });
-var edgeArray = data.filter(function(item) {
-  return item[0] == "edge";
-});
 
-data.forEach(function(element) {
-  console.log(element);
-});
+// sortData("chrome")
+// console.log(Object.keys(supportObj));
 
-console.log(chromeArray);
+// console.log("%%%");
 
-console.log(edgeArray);
+console.log(supportObj);
+
+
+
+
