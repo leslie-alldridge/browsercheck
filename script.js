@@ -38,7 +38,13 @@ const data = [
   ["chrome", "71"],
   ["chrome", "70"],
   ["edge", "18"],
-  ["edge", "17"]
+  ["edge", "17"],
+  ["ie", "18"],
+  ["ie", "17"],
+  ["firefox", "18"],
+  ["firefox", "17"],
+  ["safari", "18"],
+  ["safari", "17"]
 ]
 let supportObj = {
   "chrome": "",
@@ -52,11 +58,19 @@ function sortData(name){
   supportObj[name] = data.filter(function(item) {
     return item[0] == name;
   });
+  console.log(supportObj);
+  
+  supportObj[name] = supportObj[name].pop()
+  supportObj[name] = Number(supportObj[name][1]);
+
 }
 
 Object.keys(supportObj).forEach(function(key) {
   sortData(key)
 });
+
+console.log(supportObj);
+
 
 // sortData("chrome")
 // console.log(Object.keys(supportObj));
